@@ -1,7 +1,4 @@
 
-# Where it should look for error templates
-VALID_PATHS = ['layouts']
-
 # Use our show exception dispatcher localized in errors_controller to handle
 # showing/rendering exceptions
 module ActionDispatch
