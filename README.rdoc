@@ -48,7 +48,7 @@ After it find template - it just render it.
 
 Controller in Module:
 
-Error 500 occurred in controller MyModule::ErrorMakingController.
+Error 500 occurred in controller MyModule::ErrorMakingController in action index.
 
 Our Custom Errors Handler searches in (searches for "500.erb"):
 
@@ -60,3 +60,5 @@ Our Custom Errors Handler searches in (searches for "500.erb"):
     /views/
 
 So as you can see you can use different error templates for both controllers and modules.
+
+Copyright (c) 2010 Maciej Mensfeld, released under the MIT license
