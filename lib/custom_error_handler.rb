@@ -2,11 +2,13 @@
 # Where it should look for error templates
 VALID_PATHS = ['layouts']
 
+# Use our show exception dispatcher localized in errors_controller to handle
+# showing/rendering exceptions
 module ActionDispatch
   class ShowExceptions
     private
       def render_exception_with_template(env, exception)
-        body = ErrorsController.action(rescue_responses[exception.class.name]).call(env)
+        body = CustomErrorsHandlerController.action(rescue_responses[exception.class.name]).call(env)
         log_error(exception)
         body
       rescue
