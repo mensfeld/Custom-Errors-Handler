@@ -3,7 +3,8 @@ Gemfile
 MIT-LICENSE
 README.md
 Rakefile
-app/controllers/custom_errors_handler_controller.rb
+custom_errors_handler.gemspec
 init.rb
 lib/custom_error_handler.rb
+lib/custom_errors_handler_controller.rb
 Manifest
