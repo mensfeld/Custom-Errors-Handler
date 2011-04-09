@@ -14,7 +14,7 @@ Custom Errors Handler is intended as an easy alternative to manage showing/rende
 
 The intent behind it was to KISS as much as it is possible. It allows you to render different 404/500 templates for different controllers/modules. If no errors templates are found, it renders default public/error_code template. It works only with Rails3
 
-==Usage
+## Usage
 
 The basics of Custom Errors Handler are quite simple:
 
@@ -26,7 +26,7 @@ to views root path.
 
 It also checks in subdir "template" in any subdir.
 
-==Example
+## Example
 
 First easy one:
 
@@ -69,3 +69,4 @@ So as you can see you can use different error templates for both controllers and
 ## Copyright
 
 Copyright (c) 2011 Maciej Mensfeld. See LICENSE for details.
+
