@@ -6,7 +6,6 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Maciej Mensfeld"]
-  s.cert_chain = ["/home/mencio/.cert_keys/gem-public_cert.pem"]
   s.date = %q{2011-04-09}
   s.description = %q{Custom Errors Handler is intended as an easy alternative to manage showing/rendering exceptions templates (404, 500) in Rails3}
   s.email = %q{maciej@mensfeld.pl}
@@ -17,7 +16,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{custom_errors_handler}
   s.rubygems_version = %q{1.5.2}
-  s.signing_key = %q{/home/mencio/.cert_keys/gem-private_key.pem}
   s.summary = %q{Custom Errors Handler is intended as an easy alternative to manage showing/rendering exceptions templates (404, 500) in Rails3}
 
   if s.respond_to? :specification_version then
