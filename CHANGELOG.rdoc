@@ -1,0 +1,4 @@
+= Version 0.1.1
+* Small fix for html layout view
+= Version 0.1.0
+* Gem existence started

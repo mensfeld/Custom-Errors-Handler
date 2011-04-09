@@ -1,6 +1,6 @@
+require 'action_dispatch/middleware/show_exceptions'
 
-# Use our show exception dispatcher localized in errors_controller to handle
-# showing/rendering exceptions
+# Use our show exception dispatcher localized in errors_controller to handle showing/rendering exceptions
 module ActionDispatch
   class ShowExceptions
     private

@@ -1,22 +1,18 @@
-=CustomErrorsHandler
+# CustomErrorsHandler
 
-Custom Errors Handler is intended as an easy alternative to manage
-showing/rendering exceptions templates (404, 500) in Rails3.
+## Install
 
-The intent behind it was to KISS as much as it is possible.
+    gem install custom_error_handler
 
-It allows you to render different 404/500 templates for different controllers/modules.
+and in your Gemfile:
+    
+    gem 'custom_error_handler'
 
-I could create gem with it but i didn't because IMHO this functionality is
-to small to make a gem out of it.
+## About
 
-If no errors templates are found, it renders default public/error_code template.
+Custom Errors Handler is intended as an easy alternative to manage showing/rendering exceptions templates (404, 500) in Rails3.
 
-It works only with Rails3
-
-==Quick Start
-
-Put it in vendor/plugins :)
+The intent behind it was to KISS as much as it is possible. It allows you to render different 404/500 templates for different controllers/modules. If no errors templates are found, it renders default public/error_code template. It works only with Rails3
 
 ==Usage
 
@@ -61,4 +57,15 @@ Our Custom Errors Handler searches in (searches for "500.erb"):
 
 So as you can see you can use different error templates for both controllers and modules.
 
-Copyright (c) 2010 Maciej Mensfeld, released under the MIT license
+## Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a future version unintentionally.
+* Commit, do not mess with Rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+## Copyright
+
+Copyright (c) 2011 Maciej Mensfeld. See LICENSE for details.

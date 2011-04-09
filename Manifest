@@ -1,0 +1,9 @@
+CHANGELOG.rdoc
+Gemfile
+MIT-LICENSE
+README.md
+Rakefile
+app/controllers/custom_errors_handler_controller.rb
+init.rb
+lib/custom_error_handler.rb
+Manifest
