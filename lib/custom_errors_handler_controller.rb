@@ -47,7 +47,7 @@ class CustomErrorsHandlerController < ApplicationController
     case e
     when :internal_server_error then '500'
     when :not_found then '404'
-    when :unprocessable_entity then '500'
+    when :unprocessable_entity then '422'
     else '500'
     end
   end

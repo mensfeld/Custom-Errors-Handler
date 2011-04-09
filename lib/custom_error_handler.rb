@@ -1,4 +1,5 @@
 require 'action_dispatch/middleware/show_exceptions'
+require 'custom_errors_handler_controller'
 
 # Use our show exception dispatcher localized in errors_controller to handle showing/rendering exceptions
 module ActionDispatch
@@ -15,3 +16,4 @@ module ActionDispatch
       alias_method_chain :render_exception, :template
   end
 end
+
