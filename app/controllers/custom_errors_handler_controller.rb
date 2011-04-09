@@ -39,7 +39,7 @@ class CustomErrorsHandlerController < ApplicationController
   end
 
   def template?(template)
-    FileTest.exist?(File.join(Rails.root, 'app', 'views', "#{template}.erb"))
+    FileTest.exist?(File.join(Rails.root, 'app', 'views', "#{template}.html.erb"))
   end
 
   # Converts "name" of error into its number
