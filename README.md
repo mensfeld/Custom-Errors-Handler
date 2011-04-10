@@ -12,7 +12,7 @@ and in your Gemfile:
 
 Custom Errors Handler is intended as an easy alternative to manage showing/rendering exceptions templates (404, 500) in Rails3.
 
-The intent behind it was to KISS as much as it is possible. It allows you to render different 404/500 templates for different controllers/modules. If no errors templates are found, it renders default public/error_code template. It works only with Rails3
+The intent behind it was to KISS as much as it is possible. It allows you to render different 404/500 templates for different controllers/modules. If no errors templates are found, it renders default public/error_code template. It works only with Rails3 and it integrates to its middleware, swapping with default ActionDispatch::ShowExceptions.
 
 ## Usage
 

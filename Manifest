@@ -1,9 +1,9 @@
 CHANGELOG.rdoc
 Gemfile
 MIT-LICENSE
+Manifest
 README.md
 Rakefile
 init.rb
-lib/custom_error_handler.rb
+lib/custom_errors_handler.rb
 lib/custom_errors_handler_controller.rb
-Manifest

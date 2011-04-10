@@ -1,4 +1,7 @@
-class CustomErrorsHandlerController < ApplicationController
+require 'rubygems'
+require 'action_controller'
+
+class CustomErrorsHandlerController < ActionController::Base
   # Where it should look for error templates
   VALID_ERRORS_SUBDIRS = ['layouts']
 

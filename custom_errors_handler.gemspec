@@ -2,15 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{custom_errors_handler}
-  s.version = "0.1.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Maciej Mensfeld"]
-  s.date = %q{2011-04-09}
+  s.date = %q{2011-04-10}
   s.description = %q{Custom Errors Handler is intended as an easy alternative to manage showing/rendering exceptions templates (404, 500) in Rails3}
   s.email = %q{maciej@mensfeld.pl}
-  s.extra_rdoc_files = ["CHANGELOG.rdoc", "README.md", "lib/custom_error_handler.rb", "lib/custom_errors_handler_controller.rb"]
-  s.files = ["CHANGELOG.rdoc", "Gemfile", "MIT-LICENSE", "README.md", "Rakefile", "init.rb", "lib/custom_error_handler.rb", "lib/custom_errors_handler_controller.rb", "Manifest", "custom_errors_handler.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG.rdoc", "README.md", "lib/custom_errors_handler.rb", "lib/custom_errors_handler_controller.rb"]
+  s.files = ["CHANGELOG.rdoc", "Gemfile", "MIT-LICENSE", "Manifest", "README.md", "Rakefile", "init.rb", "lib/custom_errors_handler.rb", "lib/custom_errors_handler_controller.rb", "custom_errors_handler.gemspec"]
   s.homepage = %q{https://github.com/mensfeld/custom_errors_handler}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Custom_errors_handler", "--main", "README.md"]
   s.require_paths = ["lib"]
