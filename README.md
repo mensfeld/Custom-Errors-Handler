@@ -8,6 +8,10 @@ and in your Gemfile:
     
     gem 'custom_error_handler'
 
+and in your test.rb remove (or hide):
+
+    config.action_dispatch.show_exceptions = false
+
 ## About
 
 Custom Errors Handler is intended as an easy alternative to manage showing/rendering exceptions templates (404, 500) in Rails3.

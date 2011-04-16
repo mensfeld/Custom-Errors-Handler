@@ -19,11 +19,12 @@ module MyActionDispatch
     alias_method_chain :render_exception, :template
   end
 
-  # Swap actiondispatcher
-  class Railtie < Rails::Railtie
-    initializer "app.insert_my_errors_handler" do |app|
-      app.config.middleware.swap ActionDispatch::ShowExceptions, MyActionDispatch::ShowExceptions
-    end
+end
+
+# Swap actiondispatcher
+class Railtie < Rails::Railtie
+  initializer "app.insert_my_errors_handler" do |app|
+    app.config.middleware.swap ActionDispatch::ShowExceptions, MyActionDispatch::ShowExceptions
   end
 end
 
