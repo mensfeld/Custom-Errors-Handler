@@ -38,9 +38,9 @@ Error 404 (not found) occurred in controller ErrorMakingController.
 
 Custom Errors Handler searches for template called "404.erb" in following directories:
 
-    /views/error_making/layouts
-    /views/error_making/
-    /views/layouts
+    /views/layouts/error_making/errors
+    /views/layouts/error_making/
+    /views/layouts/
     /views/
 
 After it find template - it just render it.
@@ -52,11 +52,11 @@ Error 500 occurred in controller MyModule::ErrorMakingController in action index
 
 Our Custom Errors Handler searches in (searches for "500.erb"):
 
-    /views/my_module/error_making/layouts
-    /views/my_module/error_making/
-    /views/my_module/layouts
-    /views/my_module/
-    /views/layouts
+    /views/layouts/my_module/error_making/errors
+    /views/layouts/my_module/error_making/
+    /views/layouts/my_module/
+    /views/layouts/my_module/
+    /views/layouts/
     /views/
 
 So as you can see you can use different error templates for both controllers and modules.

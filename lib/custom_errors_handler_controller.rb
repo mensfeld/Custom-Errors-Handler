@@ -32,7 +32,9 @@ class CustomErrorsHandlerController < ActionController::Base
     path= path.split('/')
     path.size.downto(0) do |i|
       VALID_ERRORS_SUBDIRS.each { |lay_path|
-        template_path = File.join((path[0,i]).join('/'), lay_path, e)
+        template_path = File.join(lay_path, (path[0,i]).join('/'), e)
+        return template_path if template?(template_path)
+        template_path = File.join(lay_path, (path[0,i]).join('/'), 'errors',e)
         return template_path if template?(template_path)
       }
       template_path = File.join(path[0,i], e)
