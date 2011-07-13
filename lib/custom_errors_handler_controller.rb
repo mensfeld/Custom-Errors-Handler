@@ -15,8 +15,7 @@ class CustomErrorsHandlerController < ActionController::Base
   ERRORS.each do |e|
     define_method e do
       # Get path parts to check if error template exists
-      path = env["action_dispatch.request.path_parameters"]
-      path = "#{path[:controller]}/#{path[:action]}/#{path[:d]}"
+      path = request.path
       respond_to do |format|
         format.html { render error_layout(path, e), :status => e }
         format.any { head e }

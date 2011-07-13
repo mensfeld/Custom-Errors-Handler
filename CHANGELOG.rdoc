@@ -1,3 +1,5 @@
+= Version 0.2.3
+* Scanning templates using path from request.path
 = Version 0.2.2
 * Moved errors layouts structure to 'layouts'
 = Version 0.2.1
