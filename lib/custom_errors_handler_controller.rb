@@ -3,7 +3,8 @@ require 'action_controller'
 
 class CustomErrorsHandlerController < ActionController::Base
   # Where it should look for error templates
-  VALID_ERRORS_SUBDIRS = ['layouts']
+  VALID_ERRORS_DIR_PREFIX  = ['', 'layouts', 'shared']
+  VALID_ERRORS_DIR_POSTFIX = ['', 'errors', 'shared']
 
   ERRORS = [
     :internal_server_error,
@@ -28,22 +29,38 @@ class CustomErrorsHandlerController < ActionController::Base
   # Returns the file from which Rails should render error template
   def error_layout(path, e)
     e = translate_error(e)
-    path= path.split('/')
+    path = path.split('/')
     path.size.downto(0) do |i|
-      VALID_ERRORS_SUBDIRS.each { |lay_path|
-        template_path = File.join(lay_path, (path[0,i]).join('/'), e)
+      VALID_ERRORS_DIR_POSTFIX.each do |lay_path|
+        template_path = File.join(path[0,i], lay_path, e)
         return template_path if template?(template_path)
-        template_path = File.join(lay_path, (path[0,i]).join('/'), 'errors',e)
+        template_path = File.join(path[0,i], 'errors',e)
         return template_path if template?(template_path)
-      }
+      end
       template_path = File.join(path[0,i], e)
       return template_path if template?(template_path)
     end
-    e
+
+    VALID_ERRORS_DIR_PREFIX.each do |lay_path|
+      path.size.downto(0) do |i|
+        template_path = File.join(lay_path, path[0,i], e)
+        return template_path if template?(template_path)
+        template_path = File.join(lay_path, path[0,i], 'errors',e)
+        return template_path if template?(template_path)
+      end
+      template_path = File.join(path[0,i], e)
+      return template_path if template?(template_path)
+    end
+    template_from_public(e)
   end
 
   def template?(template)
-    FileTest.exist?(File.join(Rails.root, 'app', 'views', "#{template}.html.erb"))
+    exists = false
+    ['erb', 'haml'].each do |ext|
+      exists = true if FileTest.exist?(File.join(Rails.root, 'app', 'views', "#{template}.html.#{ext}"))
+      exists = true if FileTest.exist?(File.join(Rails.root, 'app', 'views', "#{template}.#{ext}"))
+    end
+    exists
   end
 
   # Converts "name" of error into its number
@@ -56,4 +73,7 @@ class CustomErrorsHandlerController < ActionController::Base
     end
   end
 
+  def template_from_public(e)
+    File.join("#{Rails.root}", 'public', "#{e}.html")
+  end
 end

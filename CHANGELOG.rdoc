@@ -1,3 +1,8 @@
+= Version 0.2.5
+* Searching with prefix and postfix paths
+= Version 0.2.4
+* Added support for haml
+* Added searching in 'shared' by default
 = Version 0.2.3
 * Scanning templates using path from request.path
 = Version 0.2.2

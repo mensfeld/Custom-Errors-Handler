@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{custom_errors_handler}
-  s.version = "0.2.3"
+  s.version = "0.2.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Maciej Mensfeld}]
-  s.date = %q{2011-07-13}
+  s.date = %q{2011-10-07}
   s.description = %q{Custom Errors Handler is intended as an easy alternative to manage showing/rendering exceptions templates (404, 500) in Rails3}
   s.email = %q{maciej@mensfeld.pl}
   s.extra_rdoc_files = [%q{CHANGELOG.rdoc}, %q{README.md}, %q{lib/custom_errors_handler.rb}, %q{lib/custom_errors_handler_controller.rb}]
